@@ -21,7 +21,7 @@ steps:
       AZURE_DEVOPS_CLI_PAT: $(System.AccessToken)
     displayName: "Login Azure DevOps extension"
 
-  - script: az devops configure --defaults organization=${{parameters.adourl}} project=${{ parameters.adoProjectNane }}
+  - script: az devops configure --defaults organization=${{parameters.adourl}} project=${{ parameters.adoProjectName }}
     displayName: "Set default azure devops organization and project"
 
   - script: |
