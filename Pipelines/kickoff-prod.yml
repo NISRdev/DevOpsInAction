@@ -11,6 +11,6 @@ stages:
     jobs:
       - job: KickoffPROD
         steps:
-          - template: ./templates/kickoff-pipeline.yml
+          - template: templates/kickoff-pipeline-template.yml
             parameters:
               pipelineDefinitionId: '5'
