@@ -6,5 +6,5 @@
 trigger: none
 
 steps:
-- script: Check for kickoff trigger
-  displayName: 'Check for kickoff trigger'
+- script: echo Hello, world!
+  displayName: 'kickoff_check'
