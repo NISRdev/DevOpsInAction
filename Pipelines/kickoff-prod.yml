@@ -13,4 +13,4 @@ stages:
         steps:
           - template: templates/kickoff-pipeline.yml
             parameters:
-              pipelineDefinitionId: '1234'
+              pipelineDefinitionId: '5'
