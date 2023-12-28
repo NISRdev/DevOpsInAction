@@ -10,6 +10,7 @@ parameters:
 
   - name: pipelineDefinitionId
     type: string
+    default: "5"
 
   - name: targetBranch
     type: string
