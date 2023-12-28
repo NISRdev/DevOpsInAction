@@ -21,12 +21,12 @@ steps:
       AZURE_DEVOPS_CLI_PAT: $(System.AccessToken)
     displayName: "Login Azure DevOps extension"
 
-  - script: az devops configure --defaults organization=${{parameters.adourl}} project=${{ parameters.adoProjectNane })
+  - script: az devops configure --defaults organization=${{parameters.adourl}} project=${{ parameters.adoProjectNane }}
     displayName: "Set default azure devops organization and project"
 
   - script: |
       echo pipeline kickoff
-      echo building pipeline #${{parameters.pipelineDefinitionId}} in ${{ parameters.targetBranch )) branch.
-      az pipelines build queue --definition-id ${{ parameters.pipelineDefinitionId }} --branch ${(parameters.targetBranch}}
+      echo building pipeline #${{parameters.pipelineDefinitionId}} in ${{ parameters.targetBranch }} branch.
+      az pipelines build queue --definition-id ${{ parameters.pipelineDefinitionId }} --branch ${{parameters.targetBranch}}
       echo Build queued
     displayName: "Queue up pipeline"
